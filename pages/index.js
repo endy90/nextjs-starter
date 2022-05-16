@@ -1,25 +1,32 @@
-import SmallCard from '../components/SmallCard';
-import { projectIcons } from '../components/Icons';
+import React, { useEffect, useState } from "react";
+import CardEvent from "../components/CardEvent";
 
-import { projects } from '../utils/projectsData';
+import eventService from "../services/event.service";
 
-const Home = () => (
-  <div className="home">
-    <h1>What Can I Deploy to Static Apps?</h1>
-    <div className="card-grid">
-      {projects.map((project) => {
-        const Icon = projectIcons[project.id];
-        return (
-          <SmallCard
-            key={project.id}
-            Icon={Icon}
-            title={project.name}
-            slug={project.slug}
-          />
-        );
-      })}
-    </div>
-  </div>
-);
+export default function Auth() {
 
-export default Home;
+  const [events, setEvents] = useState([])
+
+  useEffect(() => {
+    eventService.getEvents()
+    .then((res) =>{
+      setEvents(res.data)
+    } )
+  }, []);
+  return  <div className="home_page">
+      
+      
+      <div className='cards-products'>
+    {events &&
+        events.map((event) => (
+          // <h1 key={event.id}>{event.attributes.title}</h1>
+          <CardEvent event={event.attributes} eventId={event.id} />
+
+        ))}
+      </div>
+    
+  
+    
+
+  </div>;
+}

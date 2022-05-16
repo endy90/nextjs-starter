@@ -1,11 +1,13 @@
-import '../styles/reset.css';
-import '../styles/main.css';
+import '../styles/styles.scss';
+import MainLayout from '../layout/MainLayout';
+import '../dist/output.css'
 
-// This default export is required in a new `pages/_app.js` file.
-export default function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <MainLayout>
       <Component {...pageProps} />
-    </div>
-  );
+    </MainLayout>
+  )
 }
+
+export default MyApp

@@ -1,0 +1,27 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.main{
+    position: relative;
+    top: 40px;
+}
+
+
+$primaryColor: #DC2626;
+$secondaryColor: #090807;
+$titleFont: 'Courier New', Courier, monospace ;
+$bodyFont: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,
+
