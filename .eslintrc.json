@@ -1,8 +1,7 @@
 {
-    "extends": ["next/core-web-vitals", "next", "prettier"],
-    "plugins": ["prettier"],
+    "extends": ["next", "prettier"],
     "rules": {
-      "@next/next/google-font-display": "off",
-      "prettier/prettier": ["error"]
+      "react/no-unescaped-entities": "off",
+      "@next/next/no-page-custom-font": "off"
     }
   }
