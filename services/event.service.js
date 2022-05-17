@@ -8,7 +8,8 @@ export default {
     },
 
     getEvent(id) {
-        return axios.get(`${apiUrl}/events/${id}`).then((res) => res.json());
+        return axios.get(`${apiUrl}/events/${id}?populate=*`)
+        .then((res) => res.data);
     },
 
     addEvent(payload){

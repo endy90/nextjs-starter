@@ -7,7 +7,10 @@ const Header = () => {
   const [user, setUSer] = useState({})
 useEffect(() => {
  
-  localStorage.setItem('user',JSON.stringify({username: "user"}))
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('user',JSON.stringify({username: "user"}))
+
+  }
   let a = localStorage.getItem('user')
   setUSer(JSON.parse(a))
 
@@ -81,13 +84,25 @@ useEffect(() => {
               <div className="text-4xl">
               <ion-icon name="person-circle-outline"></ion-icon>
               </div>
+           
+           {/* {user != {}?
               <div className="text-xs leading-3">
-                {JSON.parse(localStorage.getItem('user')).username
-                
-                }
+                {JSON.parse(localStorage.getItem('user')).username}
               </div>
+          : 
+          <>
+          <div className="text-xs leading-3">
+            User
+          </div>
+          </>
+          } */}
 
-              {/* <span className="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-red-600 text-white text-xs"> 8 </span> */}
+<div className="text-xs leading-3">
+  User
+  </div>
+
+              
+
             </a>
             </Link>
           </div>

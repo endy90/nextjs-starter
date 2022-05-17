@@ -152,14 +152,14 @@
 }
 
 .addEvent{
+  
   position: relative;
-  background-color: $primaryColor;
+  // background-color: $primaryColor;
   width: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
-  
   top: 300px;
-  border: solid 4px;
+  border: solid 2px;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -170,6 +170,7 @@
     margin: 20px 0;
     left: 10%;
     display: flex;
+    border: 1px solid;
     flex-direction: column;
     height: 40px;
     width: 80%;
