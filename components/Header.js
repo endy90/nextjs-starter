@@ -20,7 +20,7 @@ useEffect(() => {
  
     <header className=" -my-10  shadow-sm bg-teal-400 relative" >
       <div className=" flex items-center justify-between" style={{marginRight: "100px", marginLeft: "100px"}}>
-      <Link href="/">
+      <Link href="/" passHref>
           <img src={logo.src} alt="Quick'Up" className="w-44" />
               
       </Link>
@@ -40,7 +40,7 @@ useEffect(() => {
 
 
           <div className="flex items-center space-x-4">
-          <Link href="/">
+          <Link href="/" passHref>
             <a  className="text-center text-gray-300 hover:text-red-500 transition relative">
               <div className="text-4xl">
               <ion-icon name="list-outline"></ion-icon>
@@ -53,7 +53,7 @@ useEffect(() => {
             </a>
             </Link>
 
-          <Link href="/setting">
+          <Link href="/setting" passHref>
             <a className="text-center text-gray-300 hover:text-red-500 transition relative">
               <div className="text-4xl">
               <ion-icon name="settings-outline"></ion-icon>
@@ -66,7 +66,7 @@ useEffect(() => {
             </a>
           </Link>
 
-          <Link href="/dashboard">
+          <Link href="/dashboard" passHref>
             <a className="text-center text-gray-300 hover:text-red-500 transition relative">
               <div className="text-4xl">
               <ion-icon name="grid-outline"></ion-icon>
@@ -80,7 +80,7 @@ useEffect(() => {
           </Link>
 
 
-          <Link href="/auth">
+          <Link href="/auth" passHref>
             <a className="text-center text-gray-300 hover:text-red-500 transition relative">
               <div className="text-4xl">
               <ion-icon name="person-circle-outline"></ion-icon>
@@ -101,8 +101,6 @@ useEffect(() => {
 <div className="text-xs leading-3">
   User
   </div>
-
-              
 
             </a>
             </Link>

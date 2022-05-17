@@ -17,7 +17,7 @@ export default function Auth() {
   }, []);
   return  <div className="home_page">
       
-      <Link href="/addEvent" >
+      <Link href="/addEvent" passHref>
       <Button style={{backgroundColor: "blue"}} variant="contained"   >
                Ajouter un évenement
             </Button>
