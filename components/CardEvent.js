@@ -26,7 +26,7 @@ const CardEvent = (props) => {
         </div>
 
         <div className="product_button">
-          <Button variant="contained" color="error">
+          <Button style={{backgroundColor: "blue"}} variant="contained" color="error">
             Participer
           </Button>
         </div>

@@ -11,6 +11,7 @@ const Index = (props) => {
 
     eventService.getEvent(1)
       .then((res) => {
+        console.log(res)
         
         setEvent(res.data.attributes);
       });
@@ -37,9 +38,7 @@ const Index = (props) => {
             {event && event.location}
           </p>
 
-          <button className="one-product__data__buttonADD">
-            Add to Cart
-          </button>
+          
         </div>
       </div>
     </>

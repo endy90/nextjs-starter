@@ -38,7 +38,7 @@ const AddEvent = () => {
             />
 
         <div className='addEvent_btn'>
-            <Button variant="contained" color="success" onClick={()=> addEvent()} >
+            <Button variant="contained" style={{backgroundColor: "green"}} color="success" onClick={()=> addEvent()} >
                         Créer
             </Button>
         </div>

@@ -8,7 +8,7 @@ export default {
     },
 
     getEvent(id) {
-        return fetch(`${apiUrl}/events/${id}?populate=*`).then((res) => res.json());
+        return axios.get(`${apiUrl}/events/${id}`).then((res) => res.json());
     },
 
     addEvent(payload){

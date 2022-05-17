@@ -1,4 +1,5 @@
 import { Button } from "@mui/material";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import CardEvent from "../components/CardEvent";
 
@@ -16,10 +17,11 @@ export default function Auth() {
   }, []);
   return  <div className="home_page">
       
-      
-      <Button variant="contained" color="success" onClick={()=> addEvent()} >
-                        + Ajouter un évenement
+      <Link href="/addEvent" >
+      <Button style={{backgroundColor: "blue"}} variant="contained"   >
+               Ajouter un évenement
             </Button>
+      </Link>
 
       <div className='cards-products'>
     {events &&

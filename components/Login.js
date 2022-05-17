@@ -16,6 +16,7 @@ const Login = () => {
         userService.login(user)
                 .then((data) => { 
             localStorage.setItem('token', data.jwt);
+            localStorage.setItem('user', JSON.stringify(data.user));
             if(data.error){
                 setShowModal(true)
             }

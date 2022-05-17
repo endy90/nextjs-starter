@@ -1,9 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import logo from "../public/logo.png";
 
 const Header = () => {
 
+  const [user, setUSer] = useState({})
+useEffect(() => {
+ 
+  localStorage.setItem('user',JSON.stringify({username: "user"}))
+  let a = localStorage.getItem('user')
+  setUSer(JSON.parse(a))
+
+}, []);
   return (
  
     <header className=" -my-10  shadow-sm bg-teal-400 relative" >
@@ -54,6 +62,19 @@ const Header = () => {
             </a>
           </Link>
 
+          <Link href="/dashboard">
+            <a className="text-center text-gray-300 hover:text-red-500 transition relative">
+              <div className="text-4xl">
+              <ion-icon name="grid-outline"></ion-icon>
+              </div>
+              <div className="text-xs leading-3">
+               Dashboard
+              </div>
+
+              {/* <span className="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-red-600 text-white text-xs"> 8 </span> */}
+            </a>
+          </Link>
+
 
           <Link href="/auth">
             <a className="text-center text-gray-300 hover:text-red-500 transition relative">
@@ -61,7 +82,9 @@ const Header = () => {
               <ion-icon name="person-circle-outline"></ion-icon>
               </div>
               <div className="text-xs leading-3">
-                Account
+                {JSON.parse(localStorage.getItem('user')).username
+                
+                }
               </div>
 
               {/* <span className="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-red-600 text-white text-xs"> 8 </span> */}
