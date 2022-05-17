@@ -15,6 +15,7 @@ useEffect(() => {
   setUSer(JSON.parse(a))
 
 }, []);
+
   return (
  
     <header className=" -my-10  shadow-sm bg-teal-400 relative" >
