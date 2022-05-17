@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import userService from '../services/user.service';
 import Modal from './Modal';
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
 const Login = () => {
 

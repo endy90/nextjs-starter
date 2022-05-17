@@ -1,5 +1,5 @@
 {
-    "extends": ["next/core-web-vitals", "next", "prettier"],
+    "extends": ["next/core-web-vitals", "next"],
     "plugins": ["prettier"],
     "rules": {
       "@next/next/google-font-display": "off",
