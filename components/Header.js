@@ -28,7 +28,7 @@ const Header = () => {
 
 
           <div className="flex items-center space-x-4">
-          <Link href="/events">
+          <Link href="/addEvent">
             <a  className="text-center text-gray-300 hover:text-red-500 transition relative">
               <div className="text-4xl">
               <ion-icon name="notifications-outline"></ion-icon>

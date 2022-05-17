@@ -10,4 +10,16 @@ export default {
     getEvent(id) {
         return fetch(`${apiUrl}/events/${id}?populate=*`).then((res) => res.json());
     },
+
+    addEvent(payload){
+        return fetch (`${apiUrl}/events`,
+        {
+			method: "POST",
+			headers: {
+				"Content-Type": "Application/json",
+			},
+			body: JSON.stringify(payload), 
+     })
+        .then((res) => res.data)
+    }
 }

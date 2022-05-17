@@ -27,7 +27,7 @@ const CardEvent = (props) => {
 
         <div className="product_button">
           <Button variant="contained" color="error">
-            Add to Cart
+            Participer
           </Button>
         </div>
       </div>

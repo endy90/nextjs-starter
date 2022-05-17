@@ -17,6 +17,8 @@ export default {
 			body: JSON.stringify(payload),
 		}).then((res) => res.json());
 	},
+
+	
 	login(payload) {
 		return fetch(`${apiUrl}/auth/local/`, {
 			method: "POST",
