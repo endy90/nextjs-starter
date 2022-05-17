@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import eventService from "../../services/event.service";
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import eventService from '../../services/event.service';
 
 const Index = (props) => {
   const router = useRouter();
@@ -9,7 +9,6 @@ const Index = (props) => {
   useEffect(() => {
     const id = router.query.id;
 
-    
     eventService.getEvent(1)
       .then((res) => {
         
