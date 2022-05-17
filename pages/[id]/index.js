@@ -6,10 +6,7 @@ const Index = (props) => {
   const router = useRouter();
   const [event, setEvent] = useState();
 
-  if (typeof window !== 'undefined') {
-   
 
-  }
   useEffect(() => {
     const id = router.query.id;
 
